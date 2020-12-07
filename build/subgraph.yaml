@@ -1,0 +1,32 @@
+specVersion: 0.0.2
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: NexoToken
+    network: mainnet
+    source:
+      address: "0xb62132e35a6c13ee1ee0f84dc5d40bad8d815206"
+      abi: NexoToken
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - NewOwner
+        - NewPotentialOwner
+        - Transfer
+        - Approval
+      abis:
+        - name: NexoToken
+          file: NexoToken\abis\NexoToken.json
+      eventHandlers:
+        - event: NewOwner(address,address)
+          handler: handleNewOwner
+        - event: NewPotentialOwner(address,address)
+          handler: handleNewPotentialOwner
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+      file: NexoToken\NexoToken.wasm
