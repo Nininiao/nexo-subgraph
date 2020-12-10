@@ -1,3 +1,22 @@
+type NewOwner @entity {
+  "This entity represents NEXO New Owner"
+  id: ID!
+  "User address"
+  address: String!
+}
+type NewPotentialOwner @entity {
+  "This entity represents New Potential NEXO Owner"
+  id: ID!
+  "User address"
+  address: String!
+}
+type Transfer @entity {
+  "This entity represents NEXO Transfer"
+  id: ID!
+  "User address"
+  address: String!
+  value: BigInt!
+}
 type ExampleEntity @entity {
   id: ID!
   count: BigInt!
