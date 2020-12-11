@@ -1,7 +1,7 @@
 # nexo-subgraph
 # Project description
 
-The World's First Instant Crypto-backed Loans.
+The World's First Instant Crypto-backed Loans. The leading regulated financial institution for digital assets, pioneer of the 1st Instant Crypto Credit Lines™ and high-yield Earn on Crypto & Fiat services.
 
 This repository contains the NEXO token smart-contract.
 
